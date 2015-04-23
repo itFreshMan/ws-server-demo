@@ -4,9 +4,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.jws.WebService;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 @WebService
 public class PersonService {
+	
 	public Person findPerson(String name) {
 		System.out.println("start findPerson ...");
 		Person p = new Person();
@@ -18,7 +21,6 @@ public class PersonService {
 	
 	public String printPersonInfo(Person p){
 		System.out.println("start printPersonInfo ...");
-		
 		return "[name:"+p.getName()+",age:"+p.getAge()+",birthdate:"+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(p.getBirthdate())+"]";
 	}
 }

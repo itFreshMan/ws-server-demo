@@ -2,7 +2,11 @@ package cn.edu.ahpu.ws.demo.c_cxf_04;
 
 import java.util.Date;
 
-public class Person {
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "PersonInfo")
+public class Person implements java.io.Serializable {
+	private static final long serialVersionUID = 1L;
 	private String name;
 	private int age;
 	private Date birthdate;

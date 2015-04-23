@@ -4,9 +4,6 @@ import org.apache.cxf.interceptor.LoggingInInterceptor;
 import org.apache.cxf.interceptor.LoggingOutInterceptor;
 import org.apache.cxf.jaxws.JaxWsServerFactoryBean;
 
-import cn.edu.ahpu.ws.demo.c_cxf_02.HelloServiceImpl;
-import cn.edu.ahpu.ws.demo.c_cxf_02.IHelloService;
-
 public class Server {
 
 	public static void main(String[] args) {
