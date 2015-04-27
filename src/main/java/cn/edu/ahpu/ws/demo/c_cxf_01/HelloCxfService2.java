@@ -17,7 +17,7 @@ import org.apache.cxf.jaxws.JaxWsServerFactoryBean;
 public class HelloCxfService2 {
 	public static void main(String[] args) {
 		JaxWsServerFactoryBean bean = new JaxWsServerFactoryBean();
-		bean.setAddress("http://192.168.1.108:6789/hello");
+		bean.setAddress("http://127.0.0.1:6789/hello");
 		//提供服务类的类型
 		bean.setServiceClass(HelloCxfService2.class);
 		

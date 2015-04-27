@@ -1,4 +1,4 @@
-package cn.edu.ahpu.ws.demo.c_cxf_04;
+package cn.edu.ahpu.ws.demo.c_cxf_06_maven_handler;
 
 import org.apache.cxf.interceptor.LoggingInInterceptor;
 import org.apache.cxf.interceptor.LoggingOutInterceptor;
@@ -8,12 +8,12 @@ public class Server {
 
 	public static void main(String[] args) {
 		JaxWsServerFactoryBean bean = new JaxWsServerFactoryBean();
-		bean.setAddress("http://127.0.0.1:6789/person");
+		bean.setAddress("http://127.0.0.1:6789/student");
 		//提供服务类的类型
-		bean.setServiceClass(PersonService.class);//这里要写接口名称
+		bean.setServiceClass(IStudentService.class);//这里要写接口名称
 		
 		//提供服务的实例
-		bean.setServiceBean(new PersonService());
+		bean.setServiceBean(new StudentServiceImpl());
 		
 		//拦截器
 		bean.getInInterceptors().add(new LoggingInInterceptor());

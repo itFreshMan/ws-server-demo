@@ -3,10 +3,7 @@ package cn.edu.ahpu.ws.demo.c_cxf_01;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.jws.WebMethod;
-
 import org.apache.cxf.frontend.ServerFactoryBean;
-import org.apache.cxf.jaxws.JaxWsServerFactoryBean;
 
 /**
  * 
@@ -20,9 +17,10 @@ public class HelloCxfService {
 	
 	public static void main(String[] args) {
 		ServerFactoryBean bean = new ServerFactoryBean();
-		bean.setAddress("http://192.168.1.108:6789/hello");
+		bean.setAddress("http://127.0.0.1:6789/hello");
 		//提供服务类的类型
 		bean.setServiceClass(HelloCxfService.class);
+		
 		
 		//提供服务的实例
 		bean.setServiceBean(new HelloCxfService());
